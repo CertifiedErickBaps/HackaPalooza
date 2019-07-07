@@ -5,17 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <style>
-      /* Always set the map height explicitly to define the size of the div
-             * element that contains the map. */
       #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+        height: auto;
       }
     </style>
     <title>Disaster Tec</title>
@@ -81,6 +72,13 @@
             <li class="nav-item mx-0 mx-lg-1">
               <a
                 class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                href="#report"
+                >Report</a
+              >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a
+                class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                 href="#contact"
                 >Contact</a
               >
@@ -116,51 +114,53 @@
     </header>
 
     <!-- Map Section -->
-    <div style="padding-top: 25px;" class="container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.784465901922!2d-99.26531028571628!3d19.550864841955956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21c914bcc0573%3A0xaa197fa6daf174de!2sAxapusco+51%2C+Lomas+de+Atizapan%2C+52977+Cd+L%C3%B3pez+Mateos%2C+M%C3%A9x.%2C+M%C3%A9xico!5e0!3m2!1ses-419!2sus!4v1562453977711!5m2!1ses-419!2sus"
-        width="600"
-        height="450"
-        frameborder="0"
-        style="border:0"
-        allowfullscreen
-      ></iframe>
-      <div class="alert alert-danger" role="alert">
-        El reporte sera evaluado!
+    <section class="page-section bg-secondary mb-0">
+      <div class="container">
+        <iframe
+          id="OurMap"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.784465901922!2d-99.26531028571628!3d19.550864841955956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21c914bcc0573%3A0xaa197fa6daf174de!2sAxapusco+51%2C+Lomas+de+Atizapan%2C+52977+Cd+L%C3%B3pez+Mateos%2C+M%C3%A9x.%2C+M%C3%A9xico!5e0!3m2!1ses-419!2sus!4v1562453977711!5m2!1ses-419!2sus"
+          allowfullscreen
+        ></iframe>
       </div>
+    </section>
 
-      <div class="form-row align-items-center">
-        <div class="col-auto my-1">
-          <label class="mr-sm-2" for="inlineFormCustomSelect"
-            >Tipo de reporte</label
-          >
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-            <option selected>Choose...</option>
-            <option value="1">Huracan</option>
-            <option value="2">Incendio</option>
-            <option value="3">Terremoto</option>
-            <option value="3">Tsunami</option>
-          </select>
+    <!-- Report Section -->
+    <section class="page-section bg-dark text-white mb-0" id="report">
+      <div class="container">
+        <div class="alert alert-danger" role="alert">
+          El reporte sera evaluado!
+        </div>
+
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label class="mr-sm-2" for="inlineFormCustomSelect"
+              >Tipo de reporte</label
+            >
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option selected>Choose...</option>
+              <option value="1">Huracan</option>
+              <option value="2">Incendio</option>
+              <option value="3">Terremoto</option>
+              <option value="3">Tsunami</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Brinda mas información sobre el evento</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
         </div>
         <div class="col-auto my-1">
           <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
       </div>
-
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Pone la localizacion</label>
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-        ></textarea>
-      </div>
-    </div>
-    <!-- <section class="page-section portfolio" id="portfolio">
-    </section> -->
+    </section>
 
     <!-- About Section -->
-    <section class="page-section bg-hack text-white mb-0" id="about">
+    <section class="page-section bg-secondary text-white mb-0" id="about">
       <div class="container">
         <!-- About Section Heading -->
         <h2 class="page-section-heading text-center text-uppercase text-white">
@@ -196,7 +196,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
