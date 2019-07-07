@@ -58,7 +58,7 @@
             <li class="nav-item mx-0 mx-lg-1">
               <a
                 class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                href="#map"
+                href="#sectionMap"
                 >Map</a
               >
             </li>
@@ -108,13 +108,13 @@
 
         <!-- Masthead Subheading -->
         <p class="masthead-subheading font-weight-light mb-0">
-          Eficacia - Optmizacion - Sustantibilidad
+          Eficacia - Optimizacion - Sustantibilidad
         </p>
       </div>
     </header>
 
     <!-- Map Section -->
-    <section class="page-section bg-secondary mb-0">
+    <section id="sectionMap" class="page-section bg-secondary mb-0">
       <div class="container">
         <iframe
           id="OurMap"
@@ -130,7 +130,9 @@
         <div class="alert alert-danger" role="alert">
           El reporte sera evaluado!
         </div>
-
+        <div>
+          <input type="text" id="ourLocation">
+        </div>
         <div class="form-row align-items-center">
           <div class="col-auto my-1">
             <label class="mr-sm-2" for="inlineFormCustomSelect"
@@ -180,17 +182,17 @@
         <div class="row">
           <div class="col-lg-4 ml-auto">
             <p class="lead">
-              Freelancer is a free bootstrap theme created by Start Bootstrap.
-              The download includes the complete source files including HTML,
-              CSS, and JavaScript as well as optional SASS stylesheets for easy
-              customization.
+                DisasTec ha sido diseñada para que los usuarios puedan localizar los incidentes que ocurren cerca
+                de ellos y en otras partes del mapa. Con el trabajo en conjunto de los usuarios y las instituciones pertinentes, se pueden prevenir
+                daños naturales, económicos y sociales importantes para la población en general.
+                
             </p>
           </div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">
-              You can create your own custom avatar for the masthead, change the
-              icon in the dividers, and add your email address to the contact
-              form to make it fully functional!
+                Con DisasTec, nuestros usuarios tendrán el poder de informar que algo ocurre donde ellos están
+                (esto en caso de que la aplicación no les informe primero), con esto se podrán evitar peores
+                incidentes y mayores pérdidas.
             </p>
           </div>
         </div>
@@ -198,7 +200,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer text-center">
+    <footer id="contact" class="footer text-center">
       <div class="container">
         <div class="row">
           <!-- Footer Location -->
@@ -228,10 +230,10 @@
 
           <!-- Footer About Text -->
           <div class="col-lg-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
+            <h4 class="text-uppercase mb-4">About our team</h4>
             <p class="lead mb-0">
-              Freelance is a free to use, MIT licensed Bootstrap theme created
-              by <a href="http://startbootstrap.com">Start Bootstrap</a>.
+              BIPE by
+              <a href="http://startbootstrap.com">A01374009@itesm.mx</a>.
             </p>
           </div>
         </div>
@@ -662,15 +664,7 @@
     <script src="js/freelancer.min.js"></script>
 
     <!-- Api for Google-->
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8
-        });
-      }
-    </script>
+   
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxTrBx-JSG5Z_9KbGNZ_VoUPsacYF_-S4&callback=initMap"
       async
